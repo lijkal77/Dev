@@ -9,7 +9,10 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation"
+				"type": "AzureBlobStorageLocation",
+				"fileName": "customer",
+				"folderPath": "output",
+				"container": "training"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
