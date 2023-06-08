@@ -13,7 +13,7 @@
 		],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
-			"blobPathBeginsWith": "/training/blobs/",
+			"blobPathBeginsWith": "/training/blobs//input/",
 			"blobPathEndsWith": "csv",
 			"ignoreEmptyBlobs": true,
 			"scope": "/subscriptions/b42f2685-f774-4dd8-9b1c-9f89dc9e987a/resourceGroups/RG-Dev/providers/Microsoft.Storage/storageAccounts/sadev77",
