@@ -1,0 +1,478 @@
+{
+	"name": "pipeline3",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "HttpReadSettings",
+							"requestMethod": "GET"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".csv"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "YearStart",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "YearStart",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "YearEnd",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "YearEnd",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LocationAbbr",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LocationAbbr",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LocationDesc",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LocationDesc",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DataSource",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DataSource",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Topic",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Topic",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Question",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Question",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Response",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Response",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DataValueUnit",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DataValueUnit",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DataValueType",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DataValueType",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DataValue",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DataValue",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DataValueAlt",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DataValueAlt",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DataValueFootnoteSymbol",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DataValueFootnoteSymbol",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DatavalueFootnote",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DatavalueFootnote",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LowConfidenceLimit",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LowConfidenceLimit",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "HighConfidenceLimit",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "HighConfidenceLimit",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "StratificationCategory1",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "StratificationCategory1",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Stratification1",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Stratification1",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "StratificationCategory2",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "StratificationCategory2",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Stratification2",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Stratification2",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "StratificationCategory3",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "StratificationCategory3",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Stratification3",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Stratification3",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GeoLocation",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "GeoLocation",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ResponseID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ResponseID",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LocationID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LocationID",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TopicID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TopicID",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "QuestionID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "QuestionID",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DataValueTypeID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DataValueTypeID",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "StratificationCategoryID1",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "StratificationCategoryID1",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "StratificationID1",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "StratificationID1",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "StratificationCategoryID2",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "StratificationCategoryID2",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "StratificationID2",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "StratificationID2",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "StratificationCategoryID3",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "StratificationCategoryID3",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "StratificationID3",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "StratificationID3",
+									"type": "String",
+									"physicalType": "String"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "ChronicDiseaseCSV",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "sacsv",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "FinalProject"
+		},
+		"annotations": []
+	}
+}

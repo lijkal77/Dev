@@ -1,0 +1,12 @@
+{
+	"name": "httpcsv",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://data.cdc.gov/api/views/g4ie-h725/rows.csv",
+			"enableServerCertificateValidation": false,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
