@@ -9,67 +9,149 @@
 		"type": "AzureSqlTable",
 		"schema": [
 			{
-				"name": "CustomerID",
+				"name": "YearStart",
 				"type": "int",
 				"precision": 10
 			},
 			{
-				"name": "NameStyle",
-				"type": "bit"
+				"name": "YearEnd",
+				"type": "int",
+				"precision": 10
 			},
 			{
-				"name": "Title",
+				"name": "LocationAbbr",
 				"type": "nvarchar"
 			},
 			{
-				"name": "FirstName",
+				"name": "LocationDesc",
 				"type": "nvarchar"
 			},
 			{
-				"name": "MiddleName",
+				"name": "DataSource",
 				"type": "nvarchar"
 			},
 			{
-				"name": "LastName",
+				"name": "Topic",
 				"type": "nvarchar"
 			},
 			{
-				"name": "Suffix",
+				"name": "Question",
 				"type": "nvarchar"
 			},
 			{
-				"name": "CompanyName",
+				"name": "Response",
 				"type": "nvarchar"
 			},
 			{
-				"name": "SalesPerson",
+				"name": "DataValueUnit",
 				"type": "nvarchar"
 			},
 			{
-				"name": "EmailAddress",
+				"name": "DataValueType",
 				"type": "nvarchar"
 			},
 			{
-				"name": "Phone",
+				"name": "DataValue",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "DataValueAlt",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "DataValueFootnoteSymbol",
 				"type": "nvarchar"
 			},
 			{
-				"name": "PasswordHash",
-				"type": "varchar"
+				"name": "DatavalueFootnote",
+				"type": "nvarchar"
 			},
 			{
-				"name": "PasswordSalt",
-				"type": "varchar"
+				"name": "LowConfidenceLimit",
+				"type": "float",
+				"precision": 15
 			},
 			{
-				"name": "rowguid",
-				"type": "uniqueidentifier"
+				"name": "HighConfidenceLimit",
+				"type": "float",
+				"precision": 15
 			},
 			{
-				"name": "ModifiedDate",
-				"type": "datetime",
-				"precision": 23,
-				"scale": 3
+				"name": "StratificationCategory1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Stratification1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "StratificationCategory2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Stratification2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "StratificationCategory3",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Stratification3",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GeoLocation",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ResponseID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "LocationID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "TopicID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "QuestionID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DataValueTypeID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "StratificationCategoryID1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "StratificationID1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "StratificationCategoryID2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "StratificationID2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "StratificationCategoryID3",
+				"type": "nvarchar"
+			},
+			{
+				"name": "StratificationID3",
+				"type": "nvarchar"
 			}
 		],
 		"typeProperties": {
