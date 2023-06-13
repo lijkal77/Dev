@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "chronic_disease.csv",
 				"folderPath": "input",
 				"container": "training"
 			},
